@@ -139,3 +139,16 @@ dmypy.json
 /TAKfreeServerV0.6.5dev.zip
 /FreeTAKServerV0.7Alpha.zip
 /TAKfreeServer0.7.0.1.zip
+
+# Cert stuff
+*.p12
+
+# IDE stuff
+.idea/
+.vscode/
+
+# Misc
+certs/
+FreeTAKServerDataPackageFolder/
+logs/
+FreeTAKServer/services/ssl_cot_service/ignore_me
