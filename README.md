@@ -36,7 +36,8 @@ Also subscribe to this feed to be automatically informed about PIP new versions:
 https://pypi.org/rss/project/freetakserver/releases.xml
 
 ### Public instance
-We support a [public instance](https://www.reddit.com/r/ATAK/wiki/index/freetakserver) of FTS.
+We support a public instance of FTS.
+the IP address is TCP: 137.184.101.250:8087
 - download the configuration [here](https://drive.google.com/file/d/1IK1LfPN13EWikHaMyOuDDwIerNGz-Wli/view?usp=sharing)
 - use the Import manager in ATAK to import the configuration
 - [more details](https://freetakteam.github.io/FreeTAKServer-User-Docs/Usage/Connecting%20ATAK/)
@@ -55,7 +56,7 @@ TAKFreeServer uses a MVC pattern, the concept of a COT (Cursor On Target) is des
 See [user docs](https://freetakteam.github.io/FreeTAKServer-User-Docs/) for various information including an UML model of the Domain classes involved in a COT event.
 
 ## Requirements
-- Python 3.8 
+- Python 3.11
 - Dependencies:
   - `flask`
   - `lxml`
@@ -73,7 +74,6 @@ For installation [go here](https://freetakteam.github.io/FreeTAKServer-User-Docs
   - **Controllers**: Contains FTS business Logic
   - **Models**: Contains all the FTS  object model
   - **Views**:   contains the access to FTS
-
 
 ## Community 
 If you have any issues don't hesitate to [bring it up](https://github.com/Tapawingo/FreeTakServer/issues), as FreeTAKServer is in continuous development.
@@ -97,7 +97,7 @@ You can also support the project by buying one of our [t-shirts](http://tee.pub/
 > Not a big fan of Paypal, but that is the easiest way I found for an initial attempt. We may go to some more ethical system in future.
 Finally you can help the project by spamming FTS information, starring our repositories in github and Pip and upvoting us.
 
-![star-history-2023123](https://user-images.githubusercontent.com/60719165/214117639-8bd41fd2-adea-4d41-a3b5-c75dca57b369.png)
+[![Star History Chart](https://api.star-history.com/svg?repos=FreeTAKTeam/FreeTakServer,tkuester/taky,TAK-Product-Center/Server&type=Date)](https://star-history.com/#FreeTAKTeam/FreeTakServer&tkuester/taky&TAK-Product-Center/Server&Date)
 
 
 ## Open Source Notes
