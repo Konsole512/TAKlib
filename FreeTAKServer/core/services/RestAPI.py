@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, session, send_file, escape
+from flask import Flask, request, jsonify, session, send_file
 from flask_sqlalchemy import SQLAlchemy
 from flask_socketio import SocketIO, emit
 from flask_httpauth import HTTPTokenAuth
@@ -19,6 +19,8 @@ import io
 from typing import Dict, List
 import zmq
 import time
+
+from markupsafe import escape
 
 from digitalpy.core.service_management.digitalpy_service import DigitalPyService
 from digitalpy.core.main.object_factory import ObjectFactory
@@ -469,9 +471,9 @@ def addSystemUser(jsondata):
                 certificate_generation.AtakOfTheCerts().bake(common_name=cert_name)
 
                 if system_user_device_type.lower() == "wintak":
-                    certificate_generation.generate_wintak_zip(user_filename=cert_name + '.p12')
+                    certificate_generation.generate_wintak_zip(user_filename=cert_name + '.p12', server_address=config.UserConnectionIP)
                 elif system_user_device_type.lower() == "mobile":
-                    certificate_generation.generate_standard_zip(user_filename=cert_name+'.p12')
+                    certificate_generation.generate_standard_zip(user_filename=cert_name+'.p12', server_address=config.UserConnectionIP)
                 else:
                     raise Exception("invalid device type, must be either mobile or wintak")
                 # add DP
